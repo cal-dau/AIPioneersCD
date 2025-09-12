@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Turing: AI Pioneer</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the presentation */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark background */
+            color: #F9FAFB; /* Light text */
+        }
+
+        /* Styling for each slide */
+        .slide {
+            display: none; /* Hide all slides by default */
+            animation: fadeIn 0.8s;
+        }
+        
+        /* The first slide is visible on load */
+        .slide:first-child {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Styling for clickable resource buttons */
+        .resource-btn {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <!-- Main presentation container -->
+    <div class="w-full max-w-4xl mx-auto bg-gray-900 rounded-2xl shadow-2xl overflow-hidden">
+        <div class="p-8 md:p-12 relative">
+
+            <!-- Slide 1: Title -->
+            <div class="slide">
+                <div class="text-center">
+                    <img src="https://placehold.co/800x400/1F2937/E5E7EB?text=Alan+Turing" alt="Portrait of Alan Turing" class="w-48 h-48 rounded-full mx-auto mb-6 object-cover ring-4 ring-cyan-500" onerror="this.onerror=null;this.src='https://placehold.co/192x192/1F2937/E5E7EB?text=A.T.';">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">The Enigma: Alan Turing</h1>
+                    <p class="text-lg md:text-xl text-cyan-400">A Pioneer of Modern Computing & AI</p>
+                    <p class="mt-6 text-gray-300">Click "Next" to begin the journey through the life and legacy of a true visionary.</p>
+                </div>
+            </div>
+
+            <!-- Slide 2: Early Life -->
+            <div class="slide">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-cyan-400 mb-4">Early Life & Education</h2>
+                        <ul class="space-y-3 text-lg text-gray-200 list-disc list-inside">
+                            <li>Born in London, England on June 23, 1912.</li>
+                            <li>Showed extraordinary aptitude for math and science from a young age.</li>
+                            <li>Graduated with top honors in mathematics from King's College, Cambridge in 1934.</li>
+                            <li>His early work laid the theoretical foundation for his future breakthroughs.</li>
+                        </ul>
+                         <a href="https://www.youtube.com/watch?v=O5d9_f_3p4s" target="_blank" class="resource-btn inline-block bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg mt-8">
+                            Watch: A Brief History
+                         </a>
+                    </div>
+                    <div class="flex justify-center">
+                         <img src="https://placehold.co/400x300/1F2937/E5E7EB?text=King's+College" alt="King's College, Cambridge" class="rounded-lg shadow-lg w-full h-auto object-cover max-w-sm" onerror="this.onerror=null;this.src='https://placehold.co/400x300/1F2937/E5E7EB?text=University';">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: The Turing Machine -->
+            <div class="slide">
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="flex justify-center md:order-2">
+                         <img src="https://placehold.co/400x300/1F2937/E5E7EB?text=Turing+Machine+Diagram" alt="Illustration of a Turing Machine" class="rounded-lg shadow-lg w-full h-auto object-cover max-w-sm" onerror="this.onerror=null;this.src='https://placehold.co/400x300/1F2937/E5E7EB?text=Diagram';">
+                    </div>
+                    <div class="md:order-1">
+                        <h2 class="text-3xl font-bold text-cyan-400 mb-4">The Turing Machine</h2>
+                        <p class="text-lg text-gray-200 mb-4">
+                            In 1936, Turing introduced a theoretical model of a "universal computing machine." This was not a physical device, but a concept that defined the principles of computation.
+                        </p>
+                        <ul class="space-y-2 text-lg text-gray-200 list-disc list-inside">
+                            <li>It established the fundamental capabilities and limits of computation.</li>
+                            <li>It laid the groundwork for all modern digital computers.</li>
+                        </ul>
+                         <a href="https://www.youtube.com/watch?v=dNRDvKyQxHw" target="_blank" class="resource-btn inline-block bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg mt-8">
+                            See an Explanation
+                         </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Bletchley Park -->
+            <div class="slide">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-cyan-400 mb-4">Codebreaker at Bletchley Park</h2>
+                        <p class="text-lg text-gray-200 mb-4">
+                            During WWII, Turing's genius was critical to the Allied war effort. He led a team at Bletchley Park to crack the German Enigma code.
+                        </p>
+                        <ul class="space-y-2 text-lg text-gray-200 list-disc list-inside">
+                            <li>He designed the "Bombe," an electromechanical device that automated codebreaking.</li>
+                            <li>His work is credited with shortening the war by over two years and saving millions of lives.</li>
+                        </ul>
+                         <a href="https://www.youtube.com/watch?v=ASfAPOiq_eQ" target="_blank" class="resource-btn inline-block bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg mt-8">
+                            Discover the Bombe
+                         </a>
+                    </div>
+                    <div class="flex justify-center">
+                         <img src="https://placehold.co/400x300/1F2937/E5E7EB?text=The+Bombe+Machine" alt="The Bombe Machine at Bletchley Park" class="rounded-lg shadow-lg w-full h-auto object-cover max-w-sm" onerror="this.onerror=null;this.src='https://placehold.co/400x300/1F2937/E5E7EB?text=Codebreaker';">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: The Turing Test -->
+            <div class="slide">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="flex justify-center md:order-2">
+                         <img src="https://placehold.co/400x300/1F2937/E5E7EB?text=Turing+Test+Illustration" alt="Illustration of the Turing Test" class="rounded-lg shadow-lg w-full h-auto object-cover max-w-sm" onerror="this.onerror=null;this.src='https://placehold.co/400x300/1F2937/E5E7EB?text=AI+Test';">
+                    </div>
+                    <div class="md:order-1">
+                        <h2 class="text-3xl font-bold text-cyan-400 mb-4">The Father of AI: The Turing Test</h2>
+                        <p class="text-lg text-gray-200 mb-4">
+                            In his 1950 paper, Turing asked a profound question: "Can machines think?" To answer it, he proposed the "Imitation Game," now known as the Turing Test.
+                        </p>
+                        <p class="text-lg text-gray-200 mb-4">
+                            A machine passes if a human evaluator, after a text-based conversation, cannot tell whether they are talking to a human or a machine.
+                        </p>
+                         <a href="https://www.youtube.com/watch?v=3wLqsRLvV-c" target="_blank" class="resource-btn inline-block bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg mt-8">
+                            Learn About the Test
+                         </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Influence on Modern AI -->
+            <div class="slide">
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-cyan-400 mb-4">Influence on Modern AI</h2>
+                        <p class="text-lg text-gray-200 mb-4">
+                            Turing's visionary ideas are the bedrock of modern artificial intelligence.
+                        </p>
+                        <ul class="space-y-2 text-lg text-gray-200 list-disc list-inside">
+                            <li><b>Natural Language Processing:</b> Virtual assistants like Siri and Alexa are direct descendants of the goal set by the Turing Test.</li>
+                            <li><b>Machine Learning:</b> His concept of a machine that could learn and modify its own instructions is the core principle of today's ML algorithms.</li>
+                        </ul>
+                         <a href="https://www.youtube.com/watch?v=S_C2_s_I04M" target="_blank" class="resource-btn inline-block bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg mt-8">
+                            Explore Turing's Legacy
+                         </a>
+                    </div>
+                    <div class="flex justify-center">
+                         <img src="https://placehold.co/400x300/1F2937/E5E7EB?text=Modern+AI+Applications" alt="Modern AI Applications Collage" class="rounded-lg shadow-lg w-full h-auto object-cover max-w-sm" onerror="this.onerror=null;this.src='https://placehold.co/400x300/1F2937/E5E7EB?text=Modern+AI';">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7: Legacy -->
+             <div class="slide">
+                <div class="text-center">
+                    <img src="https://placehold.co/800x400/1F2937/E5E7EB?text=Alan+Turing+Statue" alt="Statue of Alan Turing" class="w-48 h-48 rounded-full mx-auto mb-6 object-cover ring-4 ring-cyan-500" onerror="this.onerror=null;this.src='https://placehold.co/192x192/1F2937/E5E7EB?text=Legacy';">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">An Enduring Legacy</h2>
+                    <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+                        Alan Turing's life was tragically short, but his contributions transformed the world. His theoretical work created the field of computer science, his codebreaking saved millions of lives, and his philosophical questions about intelligence continue to drive AI research today.
+                    </p>
+                    <a href="https://www.turing.org.uk/scrapbook/" target="_blank" class="resource-btn inline-block bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg mt-8">
+                        Further Reading
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-4 w-full justify-center">
+                <button onclick="navigate(-1)" id="prevBtn" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed">Previous</button>
+                <button onclick="navigate(1)" id="nextBtn" class="bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2 px-6 rounded-lg transition-colors">Next</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for presentation logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const totalSlides = slides.length;
+
+        // Function to display a specific slide
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+            updateButtons();
+        }
+
+        // Function to navigate between slides
+        function navigate(direction) {
+            currentSlide += direction;
+            
+            // Boundary checks
+            if (currentSlide < 0) {
+                currentSlide = 0;
+            }
+            if (currentSlide >= totalSlides) {
+                currentSlide = totalSlides - 1;
+            }
+            
+            showSlide(currentSlide);
+        }
+
+        // Function to update the state of nav buttons
+        function updateButtons() {
+            // Disable 'Previous' on the first slide
+            prevBtn.disabled = currentSlide === 0;
+
+            // Change 'Next' button text to 'Finish' on the last slide
+            if (currentSlide === totalSlides - 1) {
+                nextBtn.textContent = 'Finish';
+            } else {
+                nextBtn.textContent = 'Next';
+            }
+
+            // Optional: loop back to start when 'Finish' is clicked
+            if (nextBtn.textContent === 'Finish' && currentSlide === totalSlides - 1) {
+                 nextBtn.onclick = () => {
+                    currentSlide = 0;
+                    showSlide(currentSlide);
+                 };
+            } else {
+                nextBtn.onclick = () => navigate(1);
+            }
+        }
+        
+        // Initialize the presentation
+        showSlide(currentSlide);
+
+    </script>
+</body>
+</html>
