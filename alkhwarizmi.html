@@ -120,7 +120,7 @@
         </div>
       </div>
 
-      <!-- Slide 5: Legacy -->
+<!-- Slide 5: Legacy -->
       <div class="slide">
         <div class="text-center">
           <img src="https://placehold.co/800x400/1F2937/E5E7EB?text=Al-Khwarizmi+Statue" 
@@ -131,4 +131,54 @@
             Al-Khwarizmi’s works introduced algebra and algorithms to the world.  
             His contributions continue to influence modern mathematics, computer science, and artificial intelligence.
           </p>
-          <a href="https://www.britann
+          <a href="https://www.britannica.com/biography/al-Khwarizmi" target="_blank" 
+             class="resource-btn inline-block bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg mt-8">
+            Further Reading
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-4 w-full justify-center">
+        <button onclick="navigate(-1)" id="prevBtn" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded-lg disabled:opacity-50">Previous</button>
+        <button onclick="navigate(1)" id="nextBtn" class="bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2 px-6 rounded-lg">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+      });
+      updateButtons();
+    }
+
+    function navigate(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = 0;
+      if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+      showSlide(currentSlide);
+    }
+
+    function updateButtons() {
+      prevBtn.disabled = currentSlide === 0;
+      if (currentSlide === totalSlides - 1) {
+        nextBtn.textContent = 'Finish';
+        nextBtn.onclick = () => { currentSlide = 0; showSlide(currentSlide); };
+      } else {
+        nextBtn.textContent = 'Next';
+        nextBtn.onclick = () => navigate(1);
+      }
+    }
+
+    showSlide(currentSlide);
+  </script>
+</body>
+</html>
