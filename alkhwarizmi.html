@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al-Khwarizmi: AI Pioneer</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #111827; /* Dark background */
+      color: #F9FAFB; /* Light text */
+    }
+    .slide {
+      display: none;
+      animation: fadeIn 0.8s;
+    }
+    .slide:first-child {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .resource-btn {
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .resource-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+  <!-- Home Button -->
+  <a href="index.html" 
+     class="fixed top-4 left-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2 px-4 rounded-lg shadow-lg z-50">
+     Home
+  </a>
+
+  <div class="w-full max-w-4xl mx-auto bg-gray-900 rounded-2xl shadow-2xl overflow-hidden">
+    <div class="p-8 md:p-12 relative">
+
+      <!-- Slide 1: Title -->
+      <div class="slide">
+        <div class="text-center">
+          <img src="https://placehold.co/800x400/1F2937/E5E7EB?text=Al-Khwarizmi" 
+               alt="Portrait of Al-Khwarizmi" 
+               class="w-48 h-48 rounded-full mx-auto mb-6 object-cover ring-4 ring-cyan-500"
+               onerror="this.onerror=null;this.src='https://placehold.co/192x192/1F2937/E5E7EB?text=A-K';">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Al-Khwarizmi</h1>
+          <p class="text-lg md:text-xl text-cyan-400">The Father of Algebra & Algorithms</p>
+        </div>
+      </div>
+
+      <!-- Slide 2: Early Life -->
+      <div class="slide">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-cyan-400 mb-4">Early Life</h2>
+            <ul class="space-y-3 text-lg text-gray-200 list-disc list-inside">
+              <li>Born around 780 CE in Khwarazm (modern-day Uzbekistan).</li>
+              <li>Worked at the House of Wisdom in Baghdad, a center of learning in the Islamic Golden Age.</li>
+              <li>Studied mathematics, astronomy, and geography.</li>
+            </ul>
+          </div>
+          <div class="flex justify-center">
+            <img src="https://placehold.co/400x300/1F2937/E5E7EB?text=House+of+Wisdom" 
+                 alt="House of Wisdom in Baghdad" 
+                 class="rounded-lg shadow-lg w-full h-auto max-w-sm object-cover">
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Algebra -->
+      <div class="slide">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="md:order-2 flex justify-center">
+            <img src="https://placehold.co/400x300/1F2937/E5E7EB?text=Algebra+Manuscript" 
+                 alt="Manuscript on Algebra" 
+                 class="rounded-lg shadow-lg w-full h-auto max-w-sm object-cover">
+          </div>
+          <div class="md:order-1">
+            <h2 class="text-3xl font-bold text-cyan-400 mb-4">Founder of Algebra</h2>
+            <p class="text-lg text-gray-200 mb-4">
+              His book <i>Al-Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabala</i> 
+              introduced systematic solutions of linear and quadratic equations.
+            </p>
+            <p class="text-lg text-gray-200">
+              The word <b>algebra</b> comes from “al-jabr,” one of the operations he described.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Algorithms -->
+      <div class="slide">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-cyan-400 mb-4">Algorithms</h2>
+            <p class="text-lg text-gray-200 mb-4">
+              His name gave rise to the word <b>algorithm</b>, a cornerstone concept in computer science and AI.
+            </p>
+            <ul class="space-y-2 text-lg text-gray-200 list-disc list-inside">
+              <li>Created methods for calculation and problem-solving.</li>
+              <li>Laid the groundwork for logical step-by-step procedures.</li>
+              <li>Inspired modern programming and computation.</li>
+            </ul>
+          </div>
+          <div class="flex justify-center">
+            <img src="https://placehold.co/400x300/1F2937/E5E7EB?text=Algorithm+Diagram" 
+                 alt="Algorithm concept" 
+                 class="rounded-lg shadow-lg w-full h-auto max-w-sm object-cover">
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5: Legacy -->
+      <div class="slide">
+        <div class="text-center">
+          <img src="https://placehold.co/800x400/1F2937/E5E7EB?text=Al-Khwarizmi+Statue" 
+               alt="Statue of Al-Khwarizmi" 
+               class="w-48 h-48 rounded-full mx-auto mb-6 object-cover ring-4 ring-cyan-500">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Enduring Legacy</h2>
+          <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+            Al-Khwarizmi’s works introduced algebra and algorithms to the world.  
+            His contributions continue to influence modern mathematics, computer science, and artificial intelligence.
+          </p>
+          <a href="https://www.britann
