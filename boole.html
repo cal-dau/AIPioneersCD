@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>George Boole: AI Pioneer</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #111827;
+      color: #F9FAFB;
+    }
+    .slide { display: none; animation: fadeIn 0.8s; }
+    .slide:first-child { display: block; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .resource-btn {
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .resource-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+  <!-- Home Button -->
+  <a href="index.html" 
+     class="fixed top-4 left-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2 px-4 rounded-lg shadow-lg z-50">
+     Home
+  </a>
+
+  <div class="w-full max-w-4xl mx-auto bg-gray-900 rounded-2xl shadow-2xl overflow-hidden">
+    <div class="p-8 md:p-12 relative">
+
+      <!-- Slide 1: Title -->
+      <div class="slide">
+        <div class="text-center">
+          <img src="https://placehold.co/800x400/1F2937/E5E7EB?text=George+Boole" 
+               alt="Portrait of George Boole" 
+               class="w-48 h-48 rounded-full mx-auto mb-6 object-cover ring-4 ring-cyan-500">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">George Boole</h1>
+          <p class="text-lg md:text-xl text-cyan-400">The Father of Boolean Logic</p>
+        </div>
+      </div>
+
+      <!-- Slide 2: Early Life -->
+      <div class="slide">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-cyan-400 mb-4">Early Life</h2>
+            <ul class="space-y-3 text-lg text-gray-200 list-disc list-inside">
+              <li>Born in Lincoln, England, in 1815.</li>
+              <li>Self-taught in mathematics while working as a schoolteacher.</li>
+              <li>Became the first professor of mathematics at Queen’s College, Cork.</li>
+            </ul>
+          </div>
+          <div class="flex justify-center">
+            <img src="https://placehold.co/400x300/1F2937/E5E7EB?text=Queens+College+Cork" 
+                 alt="Queen’s College Cork" 
+                 class="rounded-lg shadow-lg w-full h-auto max-w-sm object-cover">
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Boolean Logic -->
+      <div class="slide">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="md:order-2 flex justify-center">
+            <img src="https://placehold.co/400x300/1F2937/E5E7EB?text=Boolean+Algebra" 
+                 alt="Boolean Algebra" 
+                 class="rounded-lg shadow-lg w-full h-auto max-w-sm object-cover">
+          </div>
+          <div class="md:order-1">
+            <h2 class="text-3xl font-bold text-cyan-400 mb-4">Boolean Logic</h2>
+            <p class="text-lg text-gray-200 mb-4">
+              Boole developed a system of logic based on algebraic principles, now known as Boolean algebra.
+            </p>
+            <ul class="space-y-2 text-lg text-gray-200 list-disc list-inside">
+              <li>Introduced logical operations AND, OR, and NOT.</li>
+              <li>Provided a mathematical foundation for binary computation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Legacy -->
+      <div class="slide">
+        <div class="text-center">
+          <img src="https://placehold.co/800x400/1F2937/E5E7EB?text=Boole+Legacy" 
+               alt="George Boole Legacy" 
+               class="w-48 h-48 rounded-full mx-auto mb-6 object-cover ring-4 ring-cyan-500">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Enduring Legacy</h2>
+          <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+            Boolean logic is the basis of modern digital circuits, programming, and artificial intelligence.  
+            George Boole’s work laid the mathematical foundations that power every computer today.
+          </p>
+          <a href="https://www.britannica.com/biography/George-Boole" target="_blank" 
+             class="resource-btn inline-block bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg mt-8">
+            Further Reading
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-4 w-full justify-center">
+        <button onclick="navigate(-1)" id="prevBtn" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded-lg disabled:opacity-50">Previous</button>
+        <button onclick="navigate(1)" id="nextBtn" class="bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2 px-6 rounded-lg">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+      });
+      updateButtons();
+    }
+
+    function navigate(direction) {
+      currentSlide += direction;
+      if (currentSlide < 0) currentSlide = 0;
+      if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+      showSlide(currentSlide);
+    }
+
+    function updateButtons() {
+      prevBtn.disabled = currentSlide === 0;
+      if (currentSlide === totalSlides - 1) {
+        nextBtn.textContent = 'Finish';
+        nextBtn.onclick = () => { currentSlide = 0; showSlide(currentSlide); };
+      } else {
+        nextBtn.textContent = 'Next';
+        nextBtn.onclick = () => navigate(1);
+      }
+    }
+
+    showSlide(currentSlide);
+  </script>
+</body>
+</html>
