@@ -4,20 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Pioneers</title>
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #111827; /* Dark background */
-      color: #F9FAFB; /* Light text */
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      transition: transform 0.3s ease;
-    }
+    body { font-family: 'Inter', sans-serif; background-color: #111827; color: #F9FAFB; }
+    .card:hover { transform: translateY(-6px); transition: transform 0.3s ease; }
   </style>
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center p-6">
@@ -32,7 +23,21 @@
 
   <!-- Grid of Pioneers -->
   <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full">
-    
+
+    <!-- Al-Khwarizmi -->
+    <a href="alkhwarizmi.html" class="card bg-gray-900 rounded-2xl shadow-2xl p-6 text-center">
+      <img src="https://placehold.co/200x200/1F2937/E5E7EB?text=Al-Khwarizmi" alt="Al-Khwarizmi" class="w-32 h-32 rounded-full mx-auto mb-4 ring-4 ring-cyan-500 object-cover">
+      <h2 class="text-xl font-bold text-white mb-2">Al-Khwarizmi</h2>
+      <p class="text-gray-400 text-sm">Father of Algebra & Algorithms</p>
+    </a>
+
+    <!-- George Boole -->
+    <a href="boole.html" class="card bg-gray-900 rounded-2xl shadow-2xl p-6 text-center">
+      <img src="https://placehold.co/200x200/1F2937/E5E7EB?text=George+Boole" alt="George Boole" class="w-32 h-32 rounded-full mx-auto mb-4 ring-4 ring-cyan-500 object-cover">
+      <h2 class="text-xl font-bold text-white mb-2">George Boole</h2>
+      <p class="text-gray-400 text-sm">Founder of Boolean Logic</p>
+    </a>
+
     <!-- Alan Turing -->
     <a href="turing.html" class="card bg-gray-900 rounded-2xl shadow-2xl p-6 text-center">
       <img src="https://placehold.co/200x200/1F2937/E5E7EB?text=Alan+Turing" alt="Alan Turing" class="w-32 h-32 rounded-full mx-auto mb-4 ring-4 ring-cyan-500 object-cover">
@@ -40,11 +45,32 @@
       <p class="text-gray-400 text-sm">Father of Modern Computing & AI</p>
     </a>
 
+    <!-- Arthur Samuel -->
+    <a href="samuel.html" class="card bg-gray-900 rounded-2xl shadow-2xl p-6 text-center">
+      <img src="https://placehold.co/200x200/1F2937/E5E7EB?text=Arthur+Samuel" alt="Arthur Samuel" class="w-32 h-32 rounded-full mx-auto mb-4 ring-4 ring-cyan-500 object-cover">
+      <h2 class="text-xl font-bold text-white mb-2">Arthur Samuel</h2>
+      <p class="text-gray-400 text-sm">Pioneer of Machine Learning</p>
+    </a>
+
+    <!-- Herbert Simon -->
+    <a href="simon.html" class="card bg-gray-900 rounded-2xl shadow-2xl p-6 text-center">
+      <img src="https://placehold.co/200x200/1F2937/E5E7EB?text=Herbert+Simon" alt="Herbert Simon" class="w-32 h-32 rounded-full mx-auto mb-4 ring-4 ring-cyan-500 object-cover">
+      <h2 class="text-xl font-bold text-white mb-2">Herbert Simon</h2>
+      <p class="text-gray-400 text-sm">Nobel Laureate, AI & Decision-Making</p>
+    </a>
+
+    <!-- Joseph Weizenbaum -->
+    <a href="weizenbaum.html" class="card bg-gray-900 rounded-2xl shadow-2xl p-6 text-center">
+      <img src="https://placehold.co/200x200/1F2937/E5E7EB?text=Joseph+Weizenbaum" alt="Joseph Weizenbaum" class="w-32 h-32 rounded-full mx-auto mb-4 ring-4 ring-cyan-500 object-cover">
+      <h2 class="text-xl font-bold text-white mb-2">Joseph Weizenbaum</h2>
+      <p class="text-gray-400 text-sm">Creator of ELIZA, Critic of AI</p>
+    </a>
+
     <!-- John McCarthy -->
     <a href="mccarthy.html" class="card bg-gray-900 rounded-2xl shadow-2xl p-6 text-center">
       <img src="https://placehold.co/200x200/1F2937/E5E7EB?text=John+McCarthy" alt="John McCarthy" class="w-32 h-32 rounded-full mx-auto mb-4 ring-4 ring-cyan-500 object-cover">
       <h2 class="text-xl font-bold text-white mb-2">John McCarthy</h2>
-      <p class="text-gray-400 text-sm">Coined the term "Artificial Intelligence"</p>
+      <p class="text-gray-400 text-sm">Coined the term "AI"</p>
     </a>
 
     <!-- Marvin Minsky -->
@@ -54,19 +80,40 @@
       <p class="text-gray-400 text-sm">Co-founder of MIT AI Lab</p>
     </a>
 
-    <!-- Marvin Minsky -->
-    <a href="alkhwarizmi.html" class="card bg-gray-900 rounded-2xl shadow-2xl p-6 text-center">
-      <img src="https://placehold.co/200x200/1F2937/E5E7EB?text=Al+-+Khwarizmi" alt="Al-Khwarizmi" class="w-32 h-32 rounded-full mx-auto mb-4 ring-4 ring-cyan-500 object-cover">
-      <h2 class="text-xl font-bold text-white mb-2">Al-Khwarizmi</h2>
-      <p class="text-gray-400 text-sm">The Father of Algebra & Algorithms</p>
+    <!-- Allen Newell -->
+    <a href="newell.html" class="card bg-gray-900 rounded-2xl shadow-2xl p-6 text-center">
+      <img src="https://placehold.co/200x200/1F2937/E5E7EB?text=Allen+Newell" alt="Allen Newell" class="w-32 h-32 rounded-full mx-auto mb-4 ring-4 ring-cyan-500 object-cover">
+      <h2 class="text-xl font-bold text-white mb-2">Allen Newell</h2>
+      <p class="text-gray-400 text-sm">Cognitive Architect of AI</p>
     </a>
-    
+
+    <!-- Geoffrey Hinton -->
+    <a href="hinton.html" class="card bg-gray-900 rounded-2xl shadow-2xl p-6 text-center">
+      <img src="https://placehold.co/200x200/1F2937/E5E7EB?text=Geoffrey+Hinton" alt="Geoffrey Hinton" class="w-32 h-32 rounded-full mx-auto mb-4 ring-4 ring-cyan-500 object-cover">
+      <h2 class="text-xl font-bold text-white mb-2">Geoffrey Hinton</h2>
+      <p class="text-gray-400 text-sm">Godfather of Deep Learning</p>
+    </a>
+
+    <!-- Fei-Fei Li -->
+    <a href="fei-fei-li.html" class="card bg-gray-900 rounded-2xl shadow-2xl p-6 text-center">
+      <img src="https://placehold.co/200x200/1F2937/E5E7EB?text=Fei-Fei+Li" alt="Fei-Fei Li" class="w-32 h-32 rounded-full mx-auto mb-4 ring-4 ring-cyan-500 object-cover">
+      <h2 class="text-xl font-bold text-white mb-2">Fei-Fei Li</h2>
+      <p class="text-gray-400 text-sm">Leader in Computer Vision</p>
+    </a>
+
+    <!-- Ashish Vaswani -->
+    <a href="vaswani.html" class="card bg-gray-900 rounded-2xl shadow-2xl p-6 text-center">
+      <img src="https://placehold.co/200x200/1F2937/E5E7EB?text=Ashish+Vaswani" alt="Ashish Vaswani" class="w-32 h-32 rounded-full mx-auto mb-4 ring-4 ring-cyan-500 object-cover">
+      <h2 class="text-xl font-bold text-white mb-2">Ashish Vaswani</h2>
+      <p class="text-gray-400 text-sm">Co-Inventor of Transformers</p>
+    </a>
+
   </main>
 
   <!-- Footer -->
   <footer class="mt-12 text-gray-500 text-sm text-center">
     © 2025 AI Pioneers Project
   </footer>
-
 </body>
 </html>
+
